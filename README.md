@@ -1,5 +1,5 @@
-# kirbi-admin module
-A module for [Kirbi](https://github.com/richardson-media-house/kirbi), that adds a few administrative commands for server owners and bot admins to use.
+# doorman-admin module
+A module for [Doorman](https://github.com/FabricLabs/doorman), that adds a few administrative commands for server owners and bot admins to use.
 
 ## Usage
 

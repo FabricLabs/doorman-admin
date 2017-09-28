@@ -1,6 +1,6 @@
-module.exports = function (Kirbi) {
-	if (Kirbi.startTime === undefined) {
-		Kirbi.startTime = Date.now();
+module.exports = function (Doorman) {
+	if (Doorman.startTime === undefined) {
+		Doorman.startTime = Date.now();
 	}
 
 	return {
@@ -20,7 +20,7 @@ module.exports = function (Kirbi) {
 			description: 'returns the amount of time since the bot started',
 			process: (msg, suffix, isEdit, cb) => {
 				const now = Date.now();
-				let msec = now - Kirbi.startTime;
+				let msec = now - Doorman.startTime;
 				console.log(`Uptime is ${msec} milliseconds`);
 				const days = Math.floor(msec / 1000 / 60 / 60 / 24);
 				msec -= days * 1000 * 60 * 60 * 24;
@@ -44,7 +44,7 @@ module.exports = function (Kirbi) {
 				}
 				cb({
 					embed: {
-						color: Kirbi.Config.discord.defaultEmbedColor,
+						color: Doorman.Config.discord.defaultEmbedColor,
 						description: `**Uptime**: ${timestr}`
 					}
 				}, msg);
